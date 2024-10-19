@@ -13,10 +13,10 @@ app.set('view engine', 'ejs');
 
 // MySQL Connection
 const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'satawatsingwijarn',
-    password: '0UnbAeSldGyg6MYcA1IiPIPNeyPNDgqq',
-    database: 'mydb_5c4b'
+ host: 'sql12.freesqldatabase.com',
+    user: 'sql12739189',
+    password: 'ZT1JQLRDZx',
+    database: 'sql12739189'
 });
 
 db.connect((err) => {
