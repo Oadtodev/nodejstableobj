@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management</title>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+    
+    <h1 id ="h1_head"><img src="data:image/jpeg;base64,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" alt="pic">ค้นหาข้อมูลผู้เช่า</h1>
+
+    <!-- Table Displaying Data -->
+    <table id="userTable" class="display">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Age</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% users.forEach(user => { %>
+                <tr>
+                    <td><%= user.id %></td>
+                    <td><%= user.name %></td>
+                    <td><%= user.email %></td>
+                    <td><%= user.age %></td>
+                    <td>
+                        <button class="btn btn-secondary"id="edit-btn" data-id="<%= user.id %>">Edit</button>
+                        <button class="btn btn-danger"id="delete-btn" data-id="<%= user.id %>">Delete</button>
+                    </td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+
+    <!-- Add User Form -->
+    <form id="addUserForm">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="text" name="email" placeholder="Email" required>
+        <input type="number" name="age" placeholder="Age" required>
+        <button type="submit">Add User</button>
+    </form>
+
+    <!-- Edit User Form -->
+    <div id="editModal" style="display:none;">
+        <form id="editUserForm">
+            <input type="hidden" id="edit-id" name="id">
+            <input type="text" id="edit-name" name="name" required>
+            <input type="email" id="edit-email" name="email" required>
+            <input type="number" id="edit-age" name="age" required>
+            <button type="submit">Update User</button>
+        </form>
+    </div>
+</div>
+
+<script src="/js/main.js"></script>
+</body>
+</html>
